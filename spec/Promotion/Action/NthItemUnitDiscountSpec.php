@@ -1,8 +1,8 @@
 <?php
 
-namespace spec\AppBundle\Promotion\Action;
+namespace spec\CodingBerlin\ExtraPromotionPlugin\Promotion\Action;
 
-use AppBundle\Promotion\Action\NthItemUnitDiscount;
+use CodingBerlin\ExtraPromotionPlugin\Promotion\Action\NthItemUnitDiscount;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 use Sylius\Component\Core\Distributor\ProportionalIntegerDistributorInterface;
