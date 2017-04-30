@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+        <service id="coding_berlin.extra_promotion.behat.context.setup.extra_promotion_context" class="Tests\CodingBerlin\ExtraPromotionPlugin\Behat\Context\Setup\ExtraPromotionContext">
+            <argument type="service" id="sylius.behat.shared_storage" />
+            <argument type="service" id="__symfony__.sylius.factory.promotion_action" />
+            <argument type="service" id="__symfony__.sylius.factory.promotion_rule" />
+            <argument type="service" id="__symfony__.doctrine.orm.entity_manager" />
+            <tag name="fob.context_service" />
+        </service>
+    </services>
 </container>
