@@ -1,0 +1,4 @@
+suites:
+    main:
+        namespace: CodingBerlin\ExtraPromotionPlugin
+        psr4_prefix: CodingBerlin\ExtraPromotionPlugin
