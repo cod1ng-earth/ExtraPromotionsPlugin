@@ -1,0 +1,13 @@
+services:
+    app.promotion_rule_checker.email_list:
+        class: Acme\ExamplePlugin\Promotion\Rule\EmailListRuleChecker
+        tags:
+            - { name: sylius.promotion_rule_checker, type: email_list, label: 'Email List', form-type: Acme\ExamplePlugin\Form\Type\Promotion\Rule\EmailListConfigurationType }
+
+    app.promotion_action.nth_item_unit:
+        class: Acme\ExamplePlugin\Promotion\Action\NthItemUnitDiscount
+        arguments:
+            - "@sylius.proportional_integer_distributor"
+            - "@sylius.promotion.units_promotion_adjustments_applicator"
+        tags:
+            - { name: sylius.promotion_action, type: nth_item_unit_discount, label: 'Nth item unit discount', form-type: Acme\ExamplePlugin\Form\Type\Promotion\Action\NthItemUnitDiscountConfigurationType }
