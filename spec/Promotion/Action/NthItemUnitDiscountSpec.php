@@ -106,7 +106,7 @@ class NthItemUnitDiscountSpec extends ObjectBehavior
         ]);
     }
 
-    function it_validates_if_the_configuration_is_valid(
+    function it_validates_if_the_configuration_is_not_valid(
         OrderInterface $subject,
         PromotionInterface $promotion
     ) {
