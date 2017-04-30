@@ -8,6 +8,18 @@
 
         "sylius/sylius": "^1.0.0@beta"
     },
+    "authors": [
+        {
+            "name": "Robert"
+        },
+        {
+            "name": "Marcelo Santos"
+        },
+        {
+            "name": "Community contributions",
+            "homepage": "http://github.com/coding-berlin/ExtraPromotionsPlugin/contributors"
+        }
+    ],
     "require-dev": {
         "behat/behat": "^3.3",
         "behat/mink": "^1.7",
