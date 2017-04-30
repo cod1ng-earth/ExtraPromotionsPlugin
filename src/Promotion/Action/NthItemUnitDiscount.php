@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Acme\ExamplePlugin\Promotion\Action;
+namespace CodingBerlin\ExtraPromotionPlugin\Promotion\Action;
 
 use Sylius\Component\Core\Distributor\ProportionalIntegerDistributorInterface;
 use Sylius\Component\Core\Model\OrderInterface;

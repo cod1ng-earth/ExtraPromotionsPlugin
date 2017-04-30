@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Acme\ExamplePlugin\Behat\Page\Shop;
+namespace Tests\CodingBerlin\ExtraPromotionPlugin\Behat\Page\Shop;
 
 use Sylius\Behat\Page\PageInterface;
 

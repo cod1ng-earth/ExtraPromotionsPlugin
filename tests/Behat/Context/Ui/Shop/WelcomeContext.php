@@ -1,9 +1,9 @@
 <?php
 
-namespace Tests\Acme\ExamplePlugin\Behat\Context\Ui\Shop;
+namespace Tests\CodingBerlin\ExtraPromotionPlugin\Behat\Context\Ui\Shop;
 
 use Behat\Behat\Context\Context;
-use Tests\Acme\ExamplePlugin\Behat\Page\Shop\WelcomePageInterface;
+use Tests\CodingBerlin\ExtraPromotionPlugin\Behat\Page\Shop\WelcomePageInterface;
 use Webmozart\Assert\Assert;
 
 final class WelcomeContext implements Context

@@ -1,6 +1,6 @@
 <?php
 
-namespace Acme\ExamplePlugin\Form\Type\Promotion\Action;
+namespace CodingBerlin\ExtraPromotionPlugin\Form\Type\Promotion\Action;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;

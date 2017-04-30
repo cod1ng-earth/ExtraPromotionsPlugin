@@ -1,6 +1,6 @@
 <?php
 
-namespace Acme\ExamplePlugin\Form\Type\Promotion\Rule;
+namespace CodingBerlin\ExtraPromotionPlugin\Form\Type\Promotion\Rule;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;

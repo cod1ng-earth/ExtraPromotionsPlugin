@@ -1,7 +1,7 @@
 {
-    "name": "sylius/plugin-skeleton",
+    "name": "coding-berlin/extra-promotions-plugin",
     "type": "sylius-plugin",
-    "description": "Acme example plugin for Sylius.",
+    "description": "Add extra promotions plugin for Sylius.",
     "license": "MIT",
     "require": {
         "php": "^5.6|^7.0",
@@ -25,8 +25,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Acme\\ExamplePlugin\\": "src/",
-            "Tests\\Acme\\ExamplePlugin\\": "tests/"
+            "CodingBerlin\\ExtraPromotionPlugin\\": "src/",
+            "Tests\\CodingBerlin\\ExtraPromotionPlugin\\": "tests/"
         }
     }
 }

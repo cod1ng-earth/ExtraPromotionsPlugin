@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Acme\ExamplePlugin\Promotion\Rule;
+namespace CodingBerlin\ExtraPromotionPlugin\Promotion\Rule;
 
 use Sylius\Component\Core\Model\OrderInterface;
 use Sylius\Component\Promotion\Checker\Rule\RuleCheckerInterface;
