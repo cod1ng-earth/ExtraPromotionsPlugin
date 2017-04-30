@@ -31,5 +31,6 @@ default:
                 - sylius.behat.context.ui.shop.cart
 
                 - coding_berlin.extra_promotion.behat.context.setup.extra_promotion_context
+                - coding_berlin.extra_promotion.behat.context.setup.customer_context
             filters:
                 tags: "@applying_extra_promotion_rules && @ui"

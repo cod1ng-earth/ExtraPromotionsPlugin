@@ -3,6 +3,7 @@
 namespace Tests\CodingBerlin\ExtraPromotionPlugin\Behat\Context\Setup;
 
 use Behat\Behat\Context\Context;
+use CodingBerlin\ExtraPromotionPlugin\Promotion\Rule\BirthdayRuleChecker;
 use CodingBerlin\ExtraPromotionPlugin\Promotion\Rule\EmailListRuleChecker;
 use Doctrine\Common\Persistence\ObjectManager;
 use Sylius\Behat\Service\SharedStorageInterface;
@@ -64,6 +65,20 @@ class ExtraPromotionContext implements Context
         $rule = $this->ruleFactory->createNew();
         $rule->setType(EmailListRuleChecker::TYPE);
         $rule->setConfiguration(['emails' => $email]);
+
+        $this->createFixedPromotion($promotion, $discount, [], $rule);
+    }
+
+    /**
+     * @Given /^([^"]+) gives ("(?:€|£|\$)[^"]+") discount at the customers birthday$/
+     */
+    public function thePromotionGivesDiscountAtTheCustomersBirthday(
+        PromotionInterface $promotion,
+        $discount
+    ) {
+        /** @var PromotionRuleInterface $rule */
+        $rule = $this->ruleFactory->createNew();
+        $rule->setType(BirthdayRuleChecker::TYPE);
 
         $this->createFixedPromotion($promotion, $discount, [], $rule);
     }
