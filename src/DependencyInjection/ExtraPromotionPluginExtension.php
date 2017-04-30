@@ -7,7 +7,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
-final class AcmeExampleExtension extends Extension
+final class ExtraPromotionPluginExtension extends Extension
 {
     /**
      * {@inheritdoc}
