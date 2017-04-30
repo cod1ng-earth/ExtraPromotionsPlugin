@@ -6,6 +6,7 @@ use Behat\Behat\Tester\Exception\PendingException;
 use Behat\Behat\Context\Context;
 use CodingBerlin\ExtraPromotionPlugin\Promotion\Rule\BirthdayRuleChecker;
 use CodingBerlin\ExtraPromotionPlugin\Promotion\Rule\EmailListRuleChecker;
+use CodingBerlin\ExtraPromotionPlugin\Promotion\Rule\PreviousOrdersTotalAmountPromotion;
 use Doctrine\Common\Persistence\ObjectManager;
 use Sylius\Behat\Service\SharedStorageInterface;
 use Sylius\Component\Core\Factory\PromotionActionFactoryInterface;
@@ -128,8 +129,8 @@ class ExtraPromotionContext implements Context
     ) {
         /** @var PromotionRuleInterface $rule */
         $rule = $this->ruleFactory->createNew();
-        $rule->setType(EmailListRuleChecker::TYPE);
-        $rule->setConfiguration(['previously_spent_amount' => $previousAmount]);
+        $rule->setType(PreviousOrdersTotalAmountPromotion::TYPE);
+        $rule->setConfiguration(['previous_orders_total_amount' => $previousAmount]);
 
         $this->createFixedPromotion($promotion, $discount, [], $rule);
     }

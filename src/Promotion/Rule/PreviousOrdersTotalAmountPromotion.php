@@ -10,6 +10,7 @@ use Sylius\Component\Promotion\Model\PromotionSubjectInterface;
 
 class PreviousOrdersTotalAmountPromotion implements RuleCheckerInterface
 {
+    const TYPE = 'previous_order_total_amount';
     const KEY = 'previous_orders_total_amount';
 
     /**
