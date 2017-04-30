@@ -24,6 +24,6 @@ final class EmailListRuleChecker implements RuleCheckerInterface
 
         Assert::keyExists($configuration, self::KEY);
 
-        return in_array($customerEmail, explode(',', $configuration['emails']), true);
+        return in_array($customerEmail, explode(',', $configuration[self::KEY]), true);
     }
 }
