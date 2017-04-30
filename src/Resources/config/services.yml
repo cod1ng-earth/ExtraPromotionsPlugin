@@ -4,6 +4,11 @@ services:
         tags:
             - { name: sylius.promotion_rule_checker, type: email_list, label: 'Email List', form-type: CodingBerlin\ExtraPromotionPlugin\Form\Type\Promotion\Rule\EmailListConfigurationType }
 
+    app.promotion_rule_checker.birthday_today:
+        class: CodingBerlin\ExtraPromotionPlugin\Promotion\Rule\BirthdayRuleChecker
+        tags:
+            - { name: sylius.promotion_rule_checker, type: birthday_today, label: 'Birthday', form-type: CodingBerlin\ExtraPromotionPlugin\Form\Type\Promotion\Rule\BirthdayConfigurationType }
+
     app.promotion_action.nth_item_unit:
         class: CodingBerlin\ExtraPromotionPlugin\Promotion\Action\NthItemUnitDiscount
         arguments:
