@@ -1,8 +1,8 @@
 <?php
 
-namespace spec\AppBundle\Promotion\Rule;
+namespace spec\CodingBerlin\ExtraPromotionPlugin\Promotion\Rule;
 
-use AppBundle\Promotion\Rule\EmailListRuleChecker;
+use CodingBerlin\ExtraPromotionPlugin\Promotion\Rule\EmailListRuleChecker;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 use Sylius\Component\Core\Model\CustomerInterface;
