@@ -9,5 +9,12 @@
             <argument type="service" id="__symfony__.doctrine.orm.entity_manager" />
             <tag name="fob.context_service" />
         </service>
+        <service id="coding_berlin.extra_promotion.behat.context.setup.customer_context" class="Tests\CodingBerlin\ExtraPromotionPlugin\Behat\Context\Setup\CustomerContext">
+            <argument type="service" id="sylius.behat.shared_storage" />
+            <argument type="service" id="__symfony__.sylius.factory.promotion_action" />
+            <argument type="service" id="__symfony__.sylius.factory.promotion_rule" />
+            <argument type="service" id="__symfony__.doctrine.orm.entity_manager" />
+            <tag name="fob.context_service" />
+        </service>
     </services>
 </container>
