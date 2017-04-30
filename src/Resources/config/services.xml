@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+        <service id="app.promotion_rule_checker.email_list" class="CodingBerlin\ExtraPromotionPlugin\Promotion\Rule\EmailListRuleChecker">
+            <tag name="sylius.promotion_rule_checker" type="email_list" label="Email List" form-type="CodingBerlin\ExtraPromotionPlugin\Form\Type\Promotion\Rule\EmailListConfigurationType"/>
+        </service>
+        <service id="app.promotion_rule_checker.birthday_today" class="CodingBerlin\ExtraPromotionPlugin\Promotion\Rule\BirthdayRuleChecker">
+            <tag name="sylius.promotion_rule_checker" type="birthday_today" label="Birthday" form-type="CodingBerlin\ExtraPromotionPlugin\Form\Type\Promotion\Rule\BirthdayConfigurationType"/>
+        </service>
+        <service id="app.promotion_action.nth_item_unit" class="CodingBerlin\ExtraPromotionPlugin\Promotion\Action\NthItemUnitDiscount">
+            <tag name="sylius.promotion_action" type="nth_item_unit_discount" label="Nth item unit discount" form-type="CodingBerlin\ExtraPromotionPlugin\Form\Type\Promotion\Action\NthItemUnitDiscountConfigurationType"/>
+            <argument type="service" id="sylius.proportional_integer_distributor"/>
+            <argument type="service" id="sylius.promotion.units_promotion_adjustments_applicator"/>
+        </service>
+    </services>
+</container>
