@@ -8,7 +8,7 @@ use Sylius\Component\Promotion\Checker\Rule\RuleCheckerInterface;
 use Sylius\Component\Promotion\Exception\UnsupportedTypeException;
 use Sylius\Component\Promotion\Model\PromotionSubjectInterface;
 
-final class EmailListRuleChecker  implements RuleCheckerInterface
+final class EmailListRuleChecker implements RuleCheckerInterface
 {
     const TYPE = 'email_list';
 

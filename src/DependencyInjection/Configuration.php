@@ -13,6 +13,7 @@ final class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
+        $treeBuilder->root('extra_promotion');
 
         return $treeBuilder;
     }
