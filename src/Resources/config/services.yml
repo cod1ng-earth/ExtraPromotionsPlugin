@@ -11,3 +11,10 @@ services:
             - "@sylius.promotion.units_promotion_adjustments_applicator"
         tags:
             - { name: sylius.promotion_action, type: nth_item_unit_discount, label: 'Nth item unit discount', form-type: CodingBerlin\ExtraPromotionPlugin\Form\Type\Promotion\Action\NthItemUnitDiscountConfigurationType }
+
+    app.promotion_rule_checker.previous_orders_total_amount:
+        class: CodingBerlin\ExtraPromotionPlugin\Promotion\Rule\PreviousOrdersTotalAmountPromotion
+        arguments:
+            - "@sylius.repository.order"
+        tags:
+            - { name: sylius.promotion_rule_checker, type: previous_order_total_amount, label: 'Previous orders total amount', form-type: CodingBerlin\ExtraPromotionPlugin\Form\Type\Promotion\Rule\PreviousOrdersTotalAmountConfigurationType }

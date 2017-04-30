@@ -2,6 +2,7 @@
 
 namespace Tests\CodingBerlin\ExtraPromotionPlugin\Behat\Context\Setup;
 
+use Behat\Behat\Tester\Exception\PendingException;
 use Behat\Behat\Context\Context;
 use CodingBerlin\ExtraPromotionPlugin\Promotion\Rule\EmailListRuleChecker;
 use Doctrine\Common\Persistence\ObjectManager;
@@ -100,5 +101,21 @@ class ExtraPromotionContext implements Context
         }
 
         $this->objectManager->flush();
+    }
+
+    /**
+     * @Given /^([^"]+) gives ("(?:€|£|\$)[^"]+") discount if the customer spent ("(?:€|£|\$)[^"]+") previously$/
+     */
+    public function thePromotionGivesDiscountToTheCustomerWithPreviouslySpentAmount(
+        PromotionInterface $promotion,
+        $discount,
+        $previousAmount
+    ) {
+        /** @var PromotionRuleInterface $rule */
+        $rule = $this->ruleFactory->createNew();
+        $rule->setType(EmailListRuleChecker::TYPE);
+        $rule->setConfiguration(['previously_spent_amount' => $previousAmount]);
+
+        $this->createFixedPromotion($promotion, $discount, [], $rule);
     }
 }
