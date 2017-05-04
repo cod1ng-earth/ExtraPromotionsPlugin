@@ -105,4 +105,13 @@ class NthItemUnitDiscountSpec extends ObjectBehavior
             $subject, [], $promotion
         ]);
     }
+
+    function it_validates_if_the_configuration_is_not_valid(
+        OrderInterface $subject,
+        PromotionInterface $promotion
+    ) {
+        $subject->getItems()->willReturn([]);
+
+        $this->execute($subject, [], $promotion)->shouldBe(false);
+    }
 }

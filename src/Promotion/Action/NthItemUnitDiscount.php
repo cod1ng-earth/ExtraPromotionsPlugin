@@ -40,7 +40,7 @@ class NthItemUnitDiscount extends DiscountPromotionActionCommand
     }
 
     /**
-     * @param array $configuration
+     * @inheritdoc
      */
     protected function isConfigurationValid(array $configuration)
     {
@@ -58,6 +58,12 @@ class NthItemUnitDiscount extends DiscountPromotionActionCommand
     {
         /** @var OrderInterface $subject */
         Assert::isInstanceOf($subject, OrderInterface::class);
+
+        try {
+            $this->isConfigurationValid($configuration);
+        } catch (\InvalidArgumentException $exception) {
+            return false;
+        }
 
         $items = $subject->getItems();
         $nth = $configuration[self::KEY];
